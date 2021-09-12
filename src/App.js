@@ -2,6 +2,39 @@
 import './styles/styles.scss';
 import Curso from './Curso';
 
+const cursos = [
+  {
+    "title": "Curso React desde cero",
+    "image": "https://edteam-media.s3.amazonaws.com/courses/original/f7dad9a6-e060-4305-9adf-b9a9079075de.jpg",
+    "teacher": "Cristiano Ronaldo",
+    "price": 50
+  }, 
+  {
+    "title": "Curso Angular desde cero",
+    "image": "https://edteam-media.s3.amazonaws.com/courses/original/f7dad9a6-e060-4305-9adf-b9a9079075de.jpg",
+    "teacher": "El bicho",
+    "price": 40
+  }, 
+  {
+    "title": "Curso Perreo Intenso desde cero",
+    "image": "https://edteam-media.s3.amazonaws.com/courses/original/f7dad9a6-e060-4305-9adf-b9a9079075de.jpg",
+    "teacher": "CR7",
+    "price": 30
+  }, 
+  {
+    "title": "Curso Free Fire desde cero",
+    "image": "https://edteam-media.s3.amazonaws.com/courses/original/f7dad9a6-e060-4305-9adf-b9a9079075de.jpg",
+    "teacher": "Ronalgón",
+    "price": 20
+  },
+  {
+    "title": "Curso Arroz con Pollo desde cero",
+    "image": "https://edteam-media.s3.amazonaws.com/courses/original/f7dad9a6-e060-4305-9adf-b9a9079075de.jpg",
+    "teacher": "El batipibe",
+    "price": 10
+  }, 
+]
+
 function App() {
   return (
     <>
@@ -18,12 +51,14 @@ function App() {
       </div>
     </div>
     <div className="ed-grid m-grid-3">
-      <Curso />
-      <Curso />
-      <Curso />
-      <Curso />
-      <Curso />
-      <Curso />
+      {
+        cursos.map( c => 
+          <Curso 
+            title={ c.title }
+            teacher={ c.teacher }
+            price={ c.price }  
+          /> )
+      }
     </div>
     </>
   );
