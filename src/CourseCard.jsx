@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-const Curso = ({ title, image, teacher, price  }) => (
+const CourseCard = ({ id, title, image, teacher, price  }) => (
     <article className="card">
         <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
-            <img 
-                src={ image } 
-                alt={ title } 
-            />
+            <Link to={ `/cursos/${id}` }>
+                <img 
+                    src={ image } 
+                    alt={ title } 
+                />
+            </Link>
         </div>
         <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
             <h3 className="t5 s-mb-2 s-center">
@@ -24,24 +27,24 @@ const Curso = ({ title, image, teacher, price  }) => (
                 </div>
             </div>
             <div className="s-main-center">
-                <a className="button--ghost-alert button--tiny" href="#">{ `$ ${ price }` }</a>
+                <a className="button--ghost-alert button--tiny" href="https://google.com/">{ `$ ${ price }` }</a>
             </div>
         </div>
     </article>
 );
 
-Curso.propTypes = {
+CourseCard.propTypes = {
     title: PropTypes.string,
     image: PropTypes.string,
     teacher: PropTypes.string,
     price: PropTypes.number
 }
 
-Curso.defaultProps = {
+CourseCard.defaultProps = {
     title: "No hay título",
     image: "https://plantillasdememes.com/img/plantillas/imagen-no-disponible01601774755.jpg",
     teacher: "",
     price: "----"
 }
 
-export default Curso;
+export default CourseCard;
