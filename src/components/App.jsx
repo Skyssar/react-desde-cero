@@ -1,11 +1,13 @@
-import './styles/styles.scss';
-import Banner from './Banner';
-import Form from './Form';
-import CoursesGrid from './CoursesGrid';
-import Course from './Course';
+import '../styles/styles.scss';
+import Home from './Pages/Home';
+import Form from './Pages/Form';
+import CoursesGrid from './Organisms/CoursesGrid';
+import Course from './Pages/Course';
+import MainMenu from './Organisms/MainMenu';
+import Historial from './Pages/Historial';
+import Users from './Pages/Users';
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import MainMenu from './MainMenu';
-import Historial from './Historial';
 
 function App() {
   return (
@@ -13,12 +15,14 @@ function App() {
       <MainMenu />
       <Switch>
         <Route path="/" exact > 
-          <Banner /> 
+          <Home /> 
         </Route>
-        <Route path="/cursos/:id" component={ Course } />
-        <Route path="/cursos" component={ CoursesGrid } />
-        <Route path="/historial/:perreo" component={ Historial } />
+        <Route path="/courses/:id" component={ Course } />
+        <Route path="/courses" component={ CoursesGrid } />
+        <Route path="/historial/:param" component={ Historial } />
         <Route path="/form" exact component={ () => <Form name="Test"/>} />
+        <Route path="/users" component={ Users } />
+
         
         <Route>
           <div className="ed-grid">

@@ -1,5 +1,5 @@
 import React from "react";
-import CourseCard from "./CourseCard";
+import CourseCard from "../Molecules/CourseCard";
 
 const cursos = [
   {
@@ -18,21 +18,21 @@ const cursos = [
   },
   {
     "id": 3,
-    "title": "Curso Perreo Intenso desde cero",
+    "title": "Curso  Vue desde cero",
     "image": "https://edteam-media.s3.amazonaws.com/courses/original/f7dad9a6-e060-4305-9adf-b9a9079075de.jpg",
     "teacher": "CR7",
     "price": 30
   },
   {
     "id": 4,
-    "title": "Curso Free Fire desde cero",
+    "title": "Curso Django desde cero",
     "image": "https://edteam-media.s3.amazonaws.com/courses/original/f7dad9a6-e060-4305-9adf-b9a9079075de.jpg",
-    "teacher": "Ronalgón",
+    "teacher": "Profesor X",
     "price": 20
   },
   {
     "id": 5,
-    "title": "Curso Arroz con Pollo desde cero",
+    "title": "Curso x desde cero",
     "image": "https://edteam-media.s3.amazonaws.com/courses/original/f7dad9a6-e060-4305-9adf-b9a9079075de.jpg",
     "teacher": "El batipibe",
     "price": 10

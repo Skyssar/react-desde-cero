@@ -7,8 +7,8 @@ function Banner() {
                 <div className="lg-cols-4 lg-x-2">
                     <img className="main-banner__img" src="http://lorempixel.com/1200/400" alt="" />
                     <div className="main-banner__data s-center">
-                        <p className="t2 s-mb-0">Título del banner</p>
-                        <p> Subtítulo del banner</p>
+                        <p className="t2 s-mb-0">Página de práctica con React</p>
+                        <p>React-desde-cero</p>
                         <a href="https://google.com/" className="button">Botón del banner</a>
                     </div>
                 </div>
